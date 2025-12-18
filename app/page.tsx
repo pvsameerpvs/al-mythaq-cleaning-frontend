@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { Hero } from "@/components/sections/hero";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -58,82 +59,7 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero section */}
-      <section className="relative overflow-hidden">
-        <div className="container py-14 md:py-20">
-          <div className="grid gap-10 md:grid-cols-2 md:items-center">
-            <div>
-              <Badge variant="brand" className="mb-4">UAE Trusted Cleaning</Badge>
-              <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
-                Cleaning Beyond Expectations
-              </h1>
-              <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
-                AL MYTHAQ Building Cleaning Service delivers premium, reliable cleaning for homes, offices, buildings and more — with trained professionals, quality assurance, and flexible scheduling across the UAE.
-              </p>
-
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <a href="tel:0545447809">
-                  <Button variant="primary" size="lg" className="w-full sm:w-auto">
-                    <PhoneCall className="h-5 w-5" />
-                    Call Now
-                  </Button>
-                </a>
-                <a href="https://wa.me/971545447809" target="_blank" rel="noreferrer">
-                  <Button variant="secondary" size="lg" className="w-full sm:w-auto">
-                    <MessageCircle className="h-5 w-5" />
-                    WhatsApp
-                  </Button>
-                </a>
-                <Link href="/book" className="w-full sm:w-auto">
-                  <Button variant="outline" size="lg" className="w-full">
-                    <CalendarCheck className="h-5 w-5" />
-                    Book Now
-                  </Button>
-                </Link>
-              </div>
-
-              <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-600">
-                <div className="flex items-center gap-2">
-                  <SparkleIcon /> <span>Fresh, professional finish</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <ShieldCheck className="h-4 w-4 text-brand-blue" /> <span>Trusted & reliable</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="h-4 w-4 text-brand-blue" /> <span>On-time service</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-7 shadow-card">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm font-semibold text-brand-blue">Fast booking</p>
-                    <p className="text-2xl font-extrabold">Same-week availability</p>
-                  </div>
-                  <Star className="h-8 w-8 text-brand-green" />
-                </div>
-                <Separator className="my-5" />
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <MiniPoint title="Transparent pricing" desc="Clear packages for homes, offices, and buildings." />
-                  <MiniPoint title="Quality assurance" desc="We confirm the finish and your satisfaction." />
-                  <MiniPoint title="Eco-friendly options" desc="Safer products available upon request." />
-                  <MiniPoint title="Professional team" desc="Trained staff with consistent standards." />
-                </div>
-                <div className="mt-6">
-                  <Link href="/services">
-                    <Button variant="primary" className="w-full">
-                      Explore Services
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-              <div className="pointer-events-none absolute -right-12 -top-12 h-56 w-56 rounded-full bg-brand-green/20 blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-12 -left-12 h-56 w-56 rounded-full bg-brand-blue/15 blur-3xl" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* Few Words About */}
       <section className="section-muted">
