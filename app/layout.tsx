@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Headland_One } from "next/font/google";
 
 import "./globals.css";
 import { Navbar } from "@/components/shared/navbar";
@@ -8,6 +8,12 @@ import { Providers } from "@/components/shared/providers";
 import { WhatsAppFloatingButton } from "@/components/shared/whatsapp-float";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
+const headland = Headland_One({ 
+  subsets: ["latin"], 
+  weight: "400",
+  display: "swap",
+  variable: "--font-headland"
+});
 
 export const metadata: Metadata = {
   title: {
@@ -33,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} ${headland.variable}`}>
         <Providers>
           <Navbar />
           <main className="min-h-[70vh]">{children}</main>
