@@ -61,11 +61,22 @@ export function Hero() {
 
                {/* Image - Pop out top */}
                <div className="relative z-10 h-[550px] w-full">
+                 <svg width="0" height="0" className="absolute">
+                   <defs>
+                     <mask id="hero-mask" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+                       <rect x="0" y="0" width="1" height="0.4" fill="white" />
+                       <g transform="translate(-0.1, 0.15) scale(0.006, 0.00425)">
+                         <path fill="white" d="M 40 100 Q 40 60 80 60 Q 100 20 140 60 Q 180 60 180 100 Q 180 140 140 140 L 80 140 Q 40 140 40 100" transform="translate(-10 20) scale(1.1)" />
+                         <path fill="white" d="M38.1,-56.3C49.9,-43.8,60.5,-32.7,63.9,-19.9C67.3,-7.1,63.5,7.3,55.9,19.9C48.3,32.5,36.9,43.3,23.6,50.6C10.3,57.9,-5,61.7,-20.1,59.3C-35.2,56.9,-50.1,48.3,-60.8,35.4C-71.5,22.5,-77.9,5.3,-75.4,-10.6C-72.9,-26.5,-61.4,-41.1,-48.6,-53.4C-35.8,-65.7,-21.6,-75.7,-7.3,-75.3C7,-74.9,26.3,-68.8,38.1,-56.3Z" transform="translate(100 100) scale(1.15)" />
+                       </g>
+                     </mask>
+                   </defs>
+                 </svg>
                  <Image
                   src="/cleaner.png"
                   alt="Professional Cleaner"
                   fill
-                  className="object-cover object-top [mask-image:url('data:image/svg+xml;utf8,<svg viewBox=%220 0 100 100%22 xmlns=%22http://www.w3.org/2000/svg%22><rect x=%220%22 y=%220%22 width=%22100%22 height=%2275%22 fill=%22black%22/><circle cx=%2220%22 cy=%2280%22 r=%2220%22 fill=%22black%22/><circle cx=%2250%22 cy=%2285%22 r=%2220%22 fill=%22black%22/><circle cx=%2280%22 cy=%2280%22 r=%2220%22 fill=%22black%22/></svg>')] [mask-size:100%_100%] [mask-repeat:no-repeat]"
+                  className="object-cover object-top [mask-image:url(#hero-mask)] [mask-size:100%_100%] [mask-repeat:no-repeat]"
                   priority
                  />
                </div>
