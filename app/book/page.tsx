@@ -10,11 +10,13 @@ export const metadata: Metadata = {
 export default function BookPage() {
   return (
     <div>
-      <section className="section-muted">
-        <div className="container py-14">
-          <Badge variant="brand" className="mb-4">Online Booking</Badge>
-          <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">Book a cleaning appointment</h1>
-          <p className="mt-4 max-w-3xl text-slate-600 md:text-lg">
+      <section className="pt-20 pb-10 md:pt-24 md:pb-12">
+        <div className="container mx-auto px-4 text-center">
+          <Badge variant="outline" className="mb-4 border-[#92C340] text-slate-600 px-4 py-1 text-sm uppercase tracking-wider">Online Booking</Badge>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 font-headland mb-6">
+            Book a <span className="text-[#0970B2]">Cleaning</span><br /> Appointment
+          </h1>
+          <p className="max-w-3xl mx-auto text-slate-600 md:text-lg leading-relaxed">
             Choose your service, date and time. After confirmation, send the booking details directly to our WhatsApp.
           </p>
         </div>

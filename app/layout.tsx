@@ -44,7 +44,7 @@ export default function RootLayout({
           <Navbar />
           <main className="min-h-[70vh]">{children}</main>
           <Footer />
-          <WhatsAppFloatingButton />
+          {/* <WhatsAppFloatingButton /> */}
         </Providers>
       </body>
     </html>

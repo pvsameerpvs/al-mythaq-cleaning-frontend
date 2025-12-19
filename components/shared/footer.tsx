@@ -103,12 +103,12 @@ export function Footer() {
           </div>
         </div>
 
-        <Separator className="my-8" />
+        {/* <Separator className="my-8" />
 
         <div className="flex flex-col items-start justify-between gap-3 text-xs text-slate-500 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} AL MYTHAQ Building Cleaning Service. All rights reserved.</p>
-          <p>Tagline: “Cleaning Beyond Expectations”</p>
-        </div>
+          <p> “Cleaning Beyond Expectations”</p>
+        </div> */}
       </div>
     </footer>
   );
