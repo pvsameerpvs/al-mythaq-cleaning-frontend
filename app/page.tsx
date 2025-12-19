@@ -7,6 +7,8 @@ import { StatsSection } from "@/components/sections/stats";
 import { ProcessSection } from "@/components/sections/process";
 import { TestimonialsSection } from "@/components/sections/testimonials";
 
+import { ServiceTicker } from "@/components/sections/service-ticker";
+
 export const metadata: Metadata = {
   title: "Home",
   description: "AL MYTHAQ Building Cleaning Service — Cleaning Beyond Expectations. Book trusted cleaning services across the UAE.",
@@ -22,6 +24,7 @@ export default function HomePage() {
       <StatsSection />
       <ProcessSection />
       <TestimonialsSection />
+       <ServiceTicker />
     </div>
   );
 }
