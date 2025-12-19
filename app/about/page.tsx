@@ -1,66 +1,39 @@
 import type { Metadata } from "next";
+import { ServiceTicker } from "@/components/sections/service-ticker";
+import { AboutSection } from "@/components/sections/about";
+import { WhyChooseSection } from "@/components/sections/why-choose";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: "Learn about AL MYTHAQ Building Cleaning Service — trusted, premium cleaning across the UAE.",
+  title: "About Us | AL MYTHAQ Building Cleaning Service",
+  description: "Learn about AL MYTHAQ Building Cleaning Service — trusted, premium cleaning across the UAE. We deliver consistent, high-quality results for homes and businesses.",
 };
 
 export default function AboutPage() {
   return (
     <div>
-      <section className="section-muted">
-        <div className="container py-14">
-          <Badge variant="brand" className="mb-4">About AL MYTHAQ</Badge>
-          <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">A cleaner standard for the UAE</h1>
-          <p className="mt-4 max-w-3xl text-slate-600 md:text-lg">
-            AL MYTHAQ Building Cleaning Service was built around one simple goal: deliver consistent, premium cleaning you can trust. From homes and offices to buildings and hospitality properties, we combine trained staff, clear checklists, and quality assurance to keep your space spotless.
+      {/* Page Header / Intro */}
+      <section className="pt-20 pb-10 md:pt-32 md:pb-16 ">
+        <div className="container mx-auto px-4 text-center">
+          <Badge variant="outline" className="mb-4 border-[#92C340] text-slate-600 px-4 py-1 text-sm uppercase tracking-wider">
+            Who We Are
+          </Badge>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 font-headland mb-6">
+            Building Trust,<br /> 
+            One <span className="text-[#0970B2]">Clean Space</span> at a Time
+          </h1>
+          <p className="max-w-3xl mx-auto text-slate-600 md:text-lg leading-relaxed">
+            At Al Mythaq, we believe a clean environment is the foundation of a happy, productive life. 
+            We started with a vision to redefine cleaning standards in the UAE, combining 
+            professional expertise with a personal touch.
           </p>
         </div>
       </section>
 
-      <section>
-        <div className="container py-14">
-          <div className="grid gap-6 md:grid-cols-3">
-            <Card>
-              <CardContent className="p-6">
-                <h2 className="text-lg font-semibold">Our promise</h2>
-                <p className="mt-2 text-sm text-slate-600">
-                  Cleaning Beyond Expectations — every visit, every room, every detail.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="p-6">
-                <h2 className="text-lg font-semibold">How we work</h2>
-                <p className="mt-2 text-sm text-slate-600">
-                  We follow a task-based checklist, use professional tools, and confirm the finish before we leave.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="p-6">
-                <h2 className="text-lg font-semibold">Where we serve</h2>
-                <p className="mt-2 text-sm text-slate-600">
-                  UAE — Dubai, Abu Dhabi, Sharjah & nearby areas. Flexible scheduling available.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="mt-10 max-w-3xl">
-            <h3 className="text-2xl font-extrabold tracking-tight">What makes us different</h3>
-            <ul className="mt-4 space-y-3 text-slate-700">
-              <li>• Clear communication and fast response on WhatsApp</li>
-              <li>• Trained professionals with consistent standards</li>
-              <li>• Options for eco-friendly products upon request</li>
-              <li>• On-time arrivals and organized service flow</li>
-              <li>• Quality checks to ensure the results match expectations</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      {/* Requested Components */}
+      <AboutSection />
+      <WhyChooseSection />
+      <ServiceTicker />
     </div>
   );
 }
