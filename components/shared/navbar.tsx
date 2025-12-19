@@ -36,56 +36,92 @@ function NavLink({ href, label, onClick }: { href: string; label: string; onClic
 }
 
 export function Navbar() {
+  const pathname = usePathname();
+
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-slate-200 bg-white/90 backdrop-blur">
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
+    <header className="sticky top-0 z-40 w-full bg-white border-b border-slate-100 shadow-sm">
+      <div className="container flex h-20 items-center justify-between px-4 md:px-8">
+        
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
             src="/logo.png"
-            alt="AL MYTHAQ Building Cleaning Service"
-            width={120}
-            height={34}
+            alt="AL MYTHAQ"
+            width={180}
+            height={52}
             priority
+            className="w-auto h-12 md:h-16 object-contain"
           />
-          <span className="sr-only">AL MYTHAQ Building Cleaning Service</span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex items-center gap-8 mx-auto">
           {navLinks.map((l) => (
-            <NavLink key={l.href} {...l} />
+            <Link
+              key={l.href}
+              href={l.href}
+              className={cn(
+                "text-[15px] font-medium transition-all duration-200 hover:text-brand-blue",
+                pathname === l.href 
+                  ? "text-brand-blue font-semibold" 
+                  : "text-slate-600"
+              )}
+            >
+              {l.label}
+            </Link>
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
-          <Link href="/book" className="hidden md:block">
-            <Button variant="primary" className="rounded-full">
+        {/* CTA & Mobile Menu */}
+        <div className="flex items-center gap-4">
+          <Link href="/book" className="hidden lg:block">
+            <Button 
+              className="rounded-full bg-brand-blue hover:bg-brand-blue/90 text-white px-8 h-11 font-bold shadow-md shadow-brand-blue/20 transition-all hover:scale-105"
+            >
               Book Now
             </Button>
           </Link>
 
+          {/* Mobile Menu Trigger */}
           <Sheet>
             <SheetTrigger asChild>
               <button
-                className="inline-flex items-center justify-center rounded-full p-2 hover:bg-slate-100 focus-ring md:hidden"
+                className="lg:hidden inline-flex items-center justify-center rounded-xl p-2.5 bg-slate-50 text-slate-700 hover:bg-slate-100 transition-colors"
                 aria-label="Open menu"
               >
-                <Menu className="h-5 w-5" />
+                <Menu className="h-6 w-6" />
               </button>
             </SheetTrigger>
-            <SheetContent>
-              <div className="flex flex-col gap-4">
-                {navLinks.map((l) => (
-                  <NavLink key={l.href} {...l} />
-                ))}
-                <div className="pt-2">
-                  <Link href="/book">
-                    <Button className="w-full">Book Now</Button>
+            <SheetContent className="w-[300px] sm:w-[400px]">
+              <div className="flex flex-col gap-8 mt-8">
+                <nav className="flex flex-col gap-4">
+                  {navLinks.map((l) => (
+                    <Link
+                      key={l.href}
+                      href={l.href}
+                      className={cn(
+                        "text-lg font-medium px-4 py-3 rounded-xl transition-colors",
+                         pathname === l.href 
+                          ? "bg-brand-blue/10 text-brand-blue" 
+                          : "text-slate-600 hover:bg-slate-50"
+                      )}
+                    >
+                      {l.label}
+                    </Link>
+                  ))}
+                </nav>
+                <div className="px-4">
+                  <Link href="/book" className="block">
+                    <Button className="w-full rounded-full bg-brand-blue hover:bg-brand-blue/90 h-12 text-lg font-bold">
+                      Book Now
+                    </Button>
                   </Link>
                 </div>
               </div>
             </SheetContent>
           </Sheet>
         </div>
+
       </div>
     </header>
   );

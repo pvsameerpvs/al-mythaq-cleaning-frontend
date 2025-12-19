@@ -16,11 +16,11 @@ export default function ContactPage() {
       {/* Page Header */}
       <section className="pt-20 pb-10 md:pt-32 md:pb-16 ">
         <div className="container mx-auto px-4 text-center">
-          <Badge variant="outline" className="mb-4 border-[#92C340] text-slate-600 px-4 py-1 text-sm uppercase tracking-wider">
+          <Badge variant="outline" className="mb-4 border-brand-green text-slate-600 px-4 py-1 text-sm uppercase tracking-wider">
             We're Here to Help
           </Badge>
           <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 font-headland mb-6">
-             Get in <span className="text-[#0970B2]">Touch</span>
+             Get in <span className="text-brand-blue">Touch</span>
           </h1>
           <p className="max-w-3xl mx-auto text-slate-600 md:text-lg leading-relaxed">
             Ready to schedule a clean? Have a question about our services? 
@@ -40,8 +40,8 @@ export default function ContactPage() {
                  <div className="space-y-6">
                    {/* Phone */}
                    <a href="tel:0545447809" className="flex items-start gap-4 group p-4 rounded-xl hover:bg-slate-50 transition-colors">
-                     <div className="h-12 w-12 rounded-full bg-[#0970B2]/10 flex items-center justify-center shrink-0 group-hover:bg-[#0970B2] transition-colors">
-                       <Phone className="h-5 w-5 text-[#0970B2] group-hover:text-white transition-colors" />
+                     <div className="h-12 w-12 rounded-full bg-brand-blue/10 flex items-center justify-center shrink-0 group-hover:bg-brand-blue transition-colors">
+                       <Phone className="h-5 w-5 text-brand-blue group-hover:text-white transition-colors" />
                      </div>
                      <div>
                        <p className="text-sm text-slate-600 font-medium uppercase tracking-wide">Call Us</p>
@@ -51,8 +51,8 @@ export default function ContactPage() {
 
                    {/* WhatsApp */}
                    <a href="https://wa.me/971545447809" target="_blank" rel="noreferrer" className="flex items-start gap-4 group p-4 rounded-xl hover:bg-slate-50 transition-colors">
-                     <div className="h-12 w-12 rounded-full bg-[#92C340]/10 flex items-center justify-center shrink-0 group-hover:bg-[#92C340] transition-colors">
-                       <MessageCircle className="h-5 w-5 text-[#92C340] group-hover:text-white transition-colors" />
+                     <div className="h-12 w-12 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0 group-hover:bg-brand-green transition-colors">
+                       <MessageCircle className="h-5 w-5 text-brand-green group-hover:text-white transition-colors" />
                      </div>
                      <div>
                        <p className="text-sm text-slate-600 font-medium uppercase tracking-wide">WhatsApp</p>
@@ -102,7 +102,7 @@ export default function ContactPage() {
                
                {/* Decorative Overlay Badge */}
                <div className="absolute bottom-6 left-6 bg-white p-4 rounded-xl shadow-lg max-w-xs hidden sm:block">
-                  <p className="font-bold text-[#0970B2] mb-1">We Come to You</p>
+                  <p className="font-bold text-brand-blue mb-1">We Come to You</p>
                   <p className="text-xs text-slate-600">Booking a cleaning means we bring the service to your doorstep, anywhere in our coverage area.</p>
                </div>
             </div>

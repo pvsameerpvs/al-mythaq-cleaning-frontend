@@ -48,7 +48,7 @@ export function ContactFormSection() {
             value={form.name}
             onChange={(e) => update("name", e.target.value)}
             required
-            className="rounded-xl border-slate-200 bg-slate-50 h-12 focus:border-[#0970B2] focus:ring-[#0970B2]/20"
+            className="rounded-xl border-slate-200 bg-slate-50 h-12 focus:border-brand-blue focus:ring-brand-blue/20"
           />
         </div>
 
@@ -62,7 +62,7 @@ export function ContactFormSection() {
               value={form.phone}
               onChange={(e) => update("phone", e.target.value)}
               required
-              className="rounded-xl border-slate-200 bg-slate-50 h-12 focus:border-[#0970B2] focus:ring-[#0970B2]/20"
+              className="rounded-xl border-slate-200 bg-slate-50 h-12 focus:border-brand-blue focus:ring-brand-blue/20"
             />
           </div>
           <div className="space-y-2">
@@ -73,7 +73,7 @@ export function ContactFormSection() {
               placeholder="you@example.com"
               value={form.email}
               onChange={(e) => update("email", e.target.value)}
-              className="rounded-xl border-slate-200 bg-slate-50 h-12 focus:border-[#0970B2] focus:ring-[#0970B2]/20"
+              className="rounded-xl border-slate-200 bg-slate-50 h-12 focus:border-brand-blue focus:ring-brand-blue/20"
             />
           </div>
         </div>
@@ -85,7 +85,7 @@ export function ContactFormSection() {
             placeholder="e.g. Deep Cleaning, AC Cleaning"
             value={form.serviceType}
             onChange={(e) => update("serviceType", e.target.value)}
-            className="rounded-xl border-slate-200 bg-slate-50 h-12 focus:border-[#0970B2] focus:ring-[#0970B2]/20"
+            className="rounded-xl border-slate-200 bg-slate-50 h-12 focus:border-brand-blue focus:ring-brand-blue/20"
           />
         </div>
 
@@ -97,14 +97,14 @@ export function ContactFormSection() {
              value={form.message}
              onChange={(e) => update("message", e.target.value)}
              required
-             className="rounded-xl border-slate-200 bg-slate-50 min-h-[120px] focus:border-[#0970B2] focus:ring-[#0970B2]/20 resize-none"
+             className="rounded-xl border-slate-200 bg-slate-50 min-h-[120px] focus:border-brand-blue focus:ring-brand-blue/20 resize-none"
            />
         </div>
 
         <Button 
           type="submit" 
           disabled={loading}
-          className="w-full rounded-full bg-[#0970B2] hover:bg-[#0970B2]/90 text-white h-12 font-bold text-lg shadow-lg shadow-[#0970B2]/20 mt-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+          className="w-full rounded-full bg-brand-blue hover:bg-brand-blue/90 text-white h-12 font-bold text-lg shadow-lg shadow-brand-blue/20 mt-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
         >
           {loading ? "Sending..." : "Send Message"}
         </Button>
