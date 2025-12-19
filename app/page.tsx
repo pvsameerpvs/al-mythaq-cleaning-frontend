@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-
 import { Hero } from "@/components/sections/hero";
 import { AboutSection } from "@/components/sections/about";
 import { WhyChooseSection } from "@/components/sections/why-choose";

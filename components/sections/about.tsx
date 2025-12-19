@@ -6,10 +6,10 @@ import { Check } from "lucide-react";
 
 export function AboutSection() {
   return (
-    <section className="">
-      <div className="container mx-auto ">
+    <section className="py-12 md:py-24">
+      <div className="container mx-auto px-4 md:px-6">
         {/* Main Blue Card */}
-        <div className="relative overflow-hidden rounded-[2.5rem] bg-[#0970B2] p-8 md:p-12 lg:p-16">
+        <div className="relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-[#0970B2] p-6 md:p-12 lg:p-16">
           
           {/* Background Decorative Sparkles (Subtle) */}
           <div className="absolute top-10 left-10 text-white/20 animate-pulse">
@@ -22,7 +22,7 @@ export function AboutSection() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             
             {/* Left Column: Masked Image */}
-            <div className="w-full lg:w-1/2 relative h-[400px] lg:h-[500px] flex items-center justify-center">
+            <div className="w-full lg:w-1/2 relative h-[300px] md:h-[400px] lg:h-[500px] flex items-center justify-center">
                {/* Cloud Mask Container */}
                <div className="relative w-full h-full">
                  <div className="absolute inset-0 z-10">
@@ -44,6 +44,7 @@ export function AboutSection() {
                           alt="Professional Cleaner" 
                           fill 
                           className="object-cover"
+                          priority
                         />
                       </div>
                    </div>
@@ -60,18 +61,18 @@ export function AboutSection() {
 
             {/* Right Column: Content Card */}
             <div className="w-full lg:w-1/2">
-              <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-xl">
-                 <h2 className="text-3xl md:text-3xl font-extrabold text-slate-900 mb-6 font-headland">
+              <div className="bg-white rounded-[2rem] p-6 md:p-10 shadow-xl">
+                 <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-6 font-headland">
                    Few Words About <span className="text-[#0970B2]">AL MYTHAQ</span> Cleaning Services
                  </h2>
                  
-                 <p className="text-slate-600 mb-8 leading-relaxed">
+                 <p className="text-slate-600 mb-8 leading-relaxed text-sm md:text-base">
                    Trusted across the UAE for premium cleaning, we deliver consistency and precision in every detail. Our team ensures your space is left impeccably clean, refreshed, and ready to enjoy.
                  </p>
 
 
                  <Link href="/services">
-                   <Button size="lg" className="rounded-full bg-[#92C340] hover:bg-[#92C340]/90 text-white px-8 h-12 text-base font-semibold shadow-lg shadow-[#92C340]/30">
+                   <Button size="lg" className="w-full md:w-auto rounded-full bg-[#92C340] hover:bg-[#92C340]/90 text-white px-8 h-12 text-base font-semibold shadow-lg shadow-[#92C340]/30">
                      View Services
                    </Button>
                  </Link>

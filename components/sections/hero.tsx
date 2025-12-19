@@ -12,40 +12,45 @@ export function Hero() {
       <div className="container relative z-10">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           {/* Left Column: Text Content */}
-          <div className="max-w-2xl">
-            <Badge 
-              variant="brand" 
-              className="mb-6 rounded-full bg-blue-50 px-4 py-1.5 text-sm font-medium text-brand-blue hover:bg-blue-100"
-            >
-              Professional Cleaning Service Company
-            </Badge>
+          {/* Left Column: Text Content */}
+          <div className="contents lg:block lg:max-w-2xl">
+            <div className="order-1">
+              <Badge 
+                variant="brand" 
+                className="mb-6 rounded-full bg-blue-50 px-4 py-1.5 text-sm font-medium text-brand-blue hover:bg-blue-100"
+              >
+                Professional Cleaning Service Company
+              </Badge>
+              
+              <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-6xl lg:leading-tight">
+                Trusted and Reliable <br className="hidden lg:block" />
+                Cleaning Services
+              </h1>
+            </div>
             
-            <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-6xl lg:leading-tight">
-              Trusted and Reliable <br className="hidden lg:block" />
-              Cleaning Services
-            </h1>
-            
-            <p className="mt-6 text-lg text-slate-600 md:text-xl leading-relaxed max-w-lg">
-              We provide the premier cleaning service in your local area. 
-              Reliable, high-quality, and detailed cleaning services across the city.
-            </p>
+            <div className="order-3">
+              <p className="mt-6 text-lg text-slate-600 md:text-xl leading-relaxed max-w-lg">
+                We provide the premier cleaning service in your local area. 
+                Reliable, high-quality, and detailed cleaning services across the city.
+              </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="h-12 rounded-full px-8 text-base bg-[#92C340] hover:bg-[#92C340]/90">
-                  Contact Us
-                </Button>
-              </Link>
-              <Link href="/services">
-                <Button variant="secondary" size="lg" className="h-12 rounded-full bg-brand-blue text-white hover:bg-brand-blue/90 px-8 text-base shadow-lg shadow-brand-blue/25">
-                  View Services
-                </Button>
-              </Link>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <Link href="/contact">
+                  <Button size="lg" className="h-12 rounded-full px-8 text-base bg-[#92C340] hover:bg-[#92C340]/90">
+                    Contact Us
+                  </Button>
+                </Link>
+                <Link href="/services">
+                  <Button variant="secondary" size="lg" className="h-12 rounded-full bg-brand-blue text-white hover:bg-brand-blue/90 px-8 text-base shadow-lg shadow-brand-blue/25">
+                    View Services
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
 
           {/* Right Column: Image & Visuals */}
-          <div className="relative mt-10 lg:mt-0 flex justify-center">
+          <div className="relative flex justify-center order-2 lg:order-last">
            
             {/* Container */}
             <div className="relative w-full max-w-[320px] sm:max-w-[400px]">

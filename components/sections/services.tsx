@@ -1,53 +1,54 @@
 
+import Image from "next/image";
 import Link from "next/link";
-import { Home, Building2, Briefcase, UtensilsCrossed, Factory, Hotel } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 const services = [
-  { title: "Home cleaning", icon: Home, desc: "Regular or deep home cleaning with careful attention to kitchens, bathrooms, and high-touch areas." },
-  { title: "Building cleaning", icon: Building2, desc: "Common areas, corridors, lobbies, and stairwells — maintained spotless and welcoming." },
-  { title: "Office cleaning", icon: Briefcase, desc: "Daily or scheduled office cleaning for a healthy, productive workplace." },
-  { title: "Restaurant cleaning", icon: UtensilsCrossed, desc: "Front-of-house and back-of-house cleaning aligned with high hygiene expectations." },
-  { title: "Industry cleaning", icon: Factory, desc: "Site-safe cleaning for industrial spaces, storage, and utility areas." },
-  { title: "Hospitality services", icon: Hotel, desc: "Guest-ready cleaning support for hospitality properties and service apartments." },
+  { title: "Residential cleaning", image: "/residentialcleaning.jpg" },
+  { title: "Commercial cleaning", image: "/commercialcleaning.jpg" },
+  { title: "Office cleaning", image: "/officecleaning.jpg" },
+  { title: "Deep cleaning", image: "/deepcleaning.jpg" },
+  { title: "Move-in / Move-out cleaning", image: "/moveincleaning.jpg" },
+  { title: "Special event cleaning", image: "/specialeventcleaning.jpg" },
 ];
 
 export function ServicesSection() {
   return (
-    <section className="section-muted">
-      <div className="container py-14">
-        <div className="flex items-end justify-between gap-6">
-          <div>
-            <h2 className="text-2xl font-extrabold tracking-tight md:text-3xl">Cleaning Services</h2>
-            <p className="mt-3 max-w-2xl text-slate-600">
-              Choose the service that fits your space — and we’ll handle the rest with a high-trust, premium approach.
-            </p>
-          </div>
-          <Link href="/services" className="hidden sm:block">
-            <Button variant="primary">View All</Button>
-          </Link>
+    <section className="py-16 md:py-24 bg-white">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 font-headland">Cleaning Services</h2>
         </div>
 
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s) => (
-            <Card key={s.title} className="hover:shadow-card transition-shadow">
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-blue/10 text-brand-blue">
-                    <s.icon className="h-5 w-5" />
-                  </div>
-                  <CardTitle>{s.title}</CardTitle>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+          {services.map((s, idx) => (
+            <Card key={idx} className="overflow-hidden rounded-[1.5rem] border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <CardContent className="p-0">
+                <div className="relative h-64 w-full overflow-hidden">
+                   {/* Placeholder Image - in a real scenario we would have actual images */}
+                   <div className="absolute inset-0 bg-slate-200 flex items-center justify-center text-slate-400">
+                      <Image 
+                        src={s.image}
+                        alt={s.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                   </div>
                 </div>
-                <CardDescription>{s.desc}</CardDescription>
-              </CardHeader>
+                <div className="p-6 text-center">
+                  <h3 className="text-lg font-bold text-slate-900">{s.title}</h3>
+                </div>
+              </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="mt-8 sm:hidden">
+        <div className="mt-12 text-center">
           <Link href="/services">
-            <Button variant="primary" className="w-full">View All Services</Button>
+            <Button size="lg" className="rounded-full bg-cyan-400 hover:bg-cyan-500 text-white px-10 h-12 text-base font-semibold shadow-lg shadow-cyan-400/30">
+              View All Services
+            </Button>
           </Link>
         </div>
       </div>
