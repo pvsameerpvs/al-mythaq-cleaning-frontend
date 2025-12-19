@@ -56,7 +56,7 @@ export function StatsSection() {
                
                <div className="pt-4">
                  <Link href="/services">
-                   <Button size="lg" className="rounded-full bg-cyan-400 hover:bg-cyan-500 text-white px-8 h-12 text-base font-semibold border-0">
+                   <Button size="lg" className="rounded-full bg-[#92C340] hover:bg-[#92C340]/90 text-white px-8 h-12 text-base font-semibold border-0">
                      View Services
                    </Button>
                  </Link>

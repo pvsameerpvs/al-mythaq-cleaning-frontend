@@ -36,12 +36,12 @@ export function Hero() {
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Link href="/contact">
-                  <Button size="lg" className="h-12 rounded-full px-8 text-base bg-[#92C340] hover:bg-[#92C340]/90">
+                  <Button size="lg" className="h-12 rounded-full px-8 text-base ">
                     Contact Us
                   </Button>
                 </Link>
                 <Link href="/services">
-                  <Button variant="secondary" size="lg" className="h-12 rounded-full bg-brand-blue text-white hover:bg-brand-blue/90 px-8 text-base shadow-lg shadow-brand-blue/25">
+                  <Button variant="secondary" size="lg" className="h-12 rounded-full bg-[#92C340] text-white hover:bg-[#92C340]/90 px-8 text-base shadow-lg shadow-[#92C340]/30">
                     View Services
                   </Button>
                 </Link>

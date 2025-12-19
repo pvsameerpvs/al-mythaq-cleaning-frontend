@@ -46,7 +46,7 @@ export function ServicesSection() {
 
         <div className="mt-12 text-center">
           <Link href="/services">
-            <Button size="lg" className="rounded-full bg-cyan-400 hover:bg-cyan-500 text-white px-10 h-12 text-base font-semibold shadow-lg shadow-cyan-400/30">
+            <Button size="lg" className="rounded-full bg-[#92C340] hover:bg-[#92C340]/90 text-white px-10 h-12 text-base font-semibold shadow-lg shadow-[#92C340]/30">
               View All Services
             </Button>
           </Link>
