@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Star, Quote, ArrowLeft, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -40,7 +40,21 @@ const testimonials = [
 
 export function TestimonialsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const itemsPerPage = 3;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Reset slide when switching views to prevent index out of bounds
+  useEffect(() => {
+    setCurrentSlide(0);
+  }, [isMobile]);
+
+  const itemsPerPage = isMobile ? 1 : 3;
   const totalPages = Math.ceil(testimonials.length / itemsPerPage);
 
   const handleNext = () => {
