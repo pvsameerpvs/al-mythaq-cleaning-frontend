@@ -99,7 +99,7 @@ export function Hero() {
                <div className="absolute right-0 top-1/2 sm:-right-20 z-20 animate-pulse-slow max-w-[180px] sm:max-w-none">
                  <div className="rounded-2xl bg-white p-2.5 sm:p-4 shadow-xl flex items-center gap-2 sm:gap-3">
                     <div className="h-8 w-8 sm:h-10 sm:w-10 overflow-hidden rounded-full bg-yellow-400 border-2 border-white shadow-sm flex-shrink-0">
-                       <Image src="/logo.png" alt="Avatar" width={40} height={40} className="object-cover" />
+                       <Image src="/avatar.png" alt="Avatar" width={40} height={40} className="object-cover" />
                      </div>
                      <div>
                        <p className="text-[10px] sm:text-xs font-bold text-slate-900 truncate">Savannah Nguyen</p>
